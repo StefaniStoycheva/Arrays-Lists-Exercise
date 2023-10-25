@@ -1,0 +1,19 @@
+List<int> input = Console.ReadLine().Split().Select(int.Parse).ToList();
+
+
+
+while (input.Count > 1)
+{
+    List<int> output = new List<int>();
+    for (int i = 0; i < input.Count - 1; i++)
+    {
+        int num1 = input[i];
+        int num2 = input[i + 1];
+        int sum = num1 + num2;
+        output.Add(sum); // adding it to the output
+    }
+    input = output; 
+    //output = new List<int>(); //to empty the output or output.Clear();
+}
+
+Console.WriteLine(input[0]); //because the result will be only one element??
